@@ -1,26 +1,18 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import MyRouter from "./MyRouter";
 function App() {
-  const [offset, setOffset] = useState(0);
-  const [color, setColor] = useState("red");
-  useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
-    // clean up code
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  if (offset >= 0 && offset <= 100) {
-    console.log("hello from 0");
-  } else if (offset >= 101 && offset <= 200) {
-    console.log("hello from 101");
-  }
   return (
-    <div
-      className="App"
-      style={{ height: "4121px", backgroundColor: `${color}` }}
-    ></div>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/" element={<MyRouter />} />
+          <Route path="/*" element={<p>404 error</p>} />
+        </Routes>
+      </Router>
+      {/* <MyRouter /> */}
+    </div>
   );
 }
 
