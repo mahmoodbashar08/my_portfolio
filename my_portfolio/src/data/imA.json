@@ -1,8 +1,10 @@
 {
-       "state":   [{
-          "name": "software developer"
-          },{
-          "name": "ui/ux design"
-       }
+       "state":   [
+          {
+          "title": "software developer"
+          },
+          {
+          "title": "ui/ux design"
+          }
 ]
 }

@@ -3,7 +3,7 @@ import "./main.css";
 import names from "../data/name.json";
 import ImA from "./ImA";
 function Main() {
-  console.log(names.name[0].name);
+  //   console.log(names.name[0].name);
   return (
     <>
       <section className="sectionOne">

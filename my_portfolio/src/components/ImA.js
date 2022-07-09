@@ -3,14 +3,18 @@ import Typewriter from "typewriter-effect";
 import state from "../data/imA.json";
 import "./main.css";
 function ImA() {
+  //   console.log(state.state[0]);
+  let x = [];
   state.state.map((statee) => {
-    console.log(statee.name);
+    console.log(statee.title);
+    x = [...x, statee.title];
   });
+  console.log(x);
   return (
     <div className="ImA">
       <Typewriter
         options={{
-          strings: [state.state[0].name, state.state[1].name],
+          strings: x,
           autoStart: true,
           loop: true,
         }}
