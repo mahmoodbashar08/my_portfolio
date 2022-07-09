@@ -10,7 +10,7 @@ function Main() {
         <div className="sectionOneMain">
           <div className="line"></div>
           <div className="name">{names.name[0].name}</div>
-          <div className="IMA">I'M A</div>
+          <div className="IMA">I'M </div>
           <ImA />
         </div>
       </section>

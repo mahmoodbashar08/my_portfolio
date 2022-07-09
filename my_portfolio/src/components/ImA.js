@@ -16,6 +16,7 @@ function ImA() {
         options={{
           strings: x,
           autoStart: true,
+          pauseFor: "300",
           loop: true,
         }}
       />
