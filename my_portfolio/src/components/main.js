@@ -14,7 +14,7 @@ function Main() {
           <ImA />
         </div>
       </section>
-      <section></section>
+      <section className="sectionTow"></section>
       <section></section>
       <section></section>
     </>
