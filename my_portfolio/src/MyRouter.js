@@ -1,6 +1,7 @@
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { MyName } from "./components/right_side/myName";
 function MyRouter() {
   return (
     <Row>
@@ -8,7 +9,8 @@ function MyRouter() {
         <p>Left_main </p>
       </Col>
       <Col md={6} lg={6} sm={12} xs={12}>
-        <p>Right_main</p>
+        <p>Right_main </p>
+        <MyName />
       </Col>
     </Row>
   );
