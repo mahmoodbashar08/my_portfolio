@@ -1,7 +1,6 @@
 import React from "react";
 import { MyName } from "./components/right_side/myName";
 import Image from "./components/left_side/Image";
-import Icon from "./components/left_side/Image";
 import { Button, Col, Row } from "antd";
 
 function MyRouter() {
