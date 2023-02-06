@@ -1,15 +1,26 @@
 import React from "react";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { MyName } from "./components/right_side/myName";
+import Image from "./components/left_side/Image";
+import Icon from "./components/left_side/Image";
+import { Button, Col, Row } from "antd";
+
 function MyRouter() {
   return (
-    <Row>
-      <Col md={6} lg={6} sm={0} xs={0} className="d-none d-lg-block d-md-block">
-        <p>Left_main </p>
+    <Row style={{ height: "100vh" }}>
+      <Col span={12} lg={12} md={12} sm={12} xs={0}>
+        <div
+          style={{
+            display: "flex",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}>
+          <Image />
+        </div>
       </Col>
-      <Col md={6} lg={6} sm={12} xs={12}>
-        <p>Right_main </p>
+      <Col span={12} lg={12} md={12} sm={12} xs={24}>
         <MyName />
       </Col>
     </Row>
