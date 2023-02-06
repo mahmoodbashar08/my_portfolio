@@ -2,6 +2,7 @@ import React from "react";
 import { MyName } from "./components/right_side/myName";
 import Image from "./components/left_side/Image";
 import { Button, Col, Row } from "antd";
+import Skills from "./components/right_side/Skills";
 
 function MyRouter() {
   return (
@@ -21,6 +22,7 @@ function MyRouter() {
       </Col>
       <Col span={12} lg={12} md={12} sm={12} xs={24}>
         <MyName />
+        <Skills />
       </Col>
     </Row>
   );

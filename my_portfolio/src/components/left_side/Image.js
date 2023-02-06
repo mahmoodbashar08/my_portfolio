@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { UserAuth } from "../../UseAuth";
 import "./Image.css";
 function Icon() {
-  const [position, setPosition] = useState();
+  const { position, setPosition } = UserAuth();
   window.onscroll = () => {
     console.log("Current scroll position: ", window.pageYOffset);
     setPosition(window.pageYOffset);
@@ -13,10 +14,9 @@ function Icon() {
           ? {
               backgroundColor: "#DE9D36",
               fill: "#DE9D36",
-              width: "50.8%",
+              width: "50%",
               transition: "background-color 0.5s,fill .5s ",
               display: "flex",
-
               justifyContent: "center",
               alignContent: "center",
               marginTop: "-110px",
@@ -25,9 +25,10 @@ function Icon() {
               display: "flex",
               justifyContent: "center",
               alignContent: "center",
+
               backgroundColor: "#e54849",
               fill: "#e54849",
-              width: "50.8%",
+              width: "50%",
               transition: "background-color 0.5s,fill .5s ",
               marginTop: "-110px",
             }

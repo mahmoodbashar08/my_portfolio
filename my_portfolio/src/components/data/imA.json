@@ -1,15 +1,15 @@
 {
-   "name": [
-      {
-         "name": "Mahmood Bashar Ahmed"
-      }
-   ],
-       "state":   [
-          {
-          "title": "A Software Developer"
-          },
-          {
-          "title": "An UI/Ux Designer"
-          }
-]
+  "name": [
+    {
+      "name": "Mahmood Bashar"
+    }
+  ],
+  "state": [
+    {
+      "title": "A Software Developer"
+    },
+    {
+      "title": "An UI/Ux Designer"
+    }
+  ]
 }
