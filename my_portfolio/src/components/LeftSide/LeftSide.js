@@ -9,9 +9,9 @@ const LeftSide = () => {
 
   if (position < 250) {
     backgroundColor = "#E54849";
-  } else if (position >= 250 && position < 800) {
+  } else if (position >= 250 && position < 1400) {
     backgroundColor = "#DE9D36";
-  } else if (position >= 800 && position < 1800) {
+  } else if (position >= 1400 && position < 1800) {
     backgroundColor = "#729974";
   } else if (position >= 1800) {
     backgroundColor = "#AB58A4";

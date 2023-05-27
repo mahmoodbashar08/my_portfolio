@@ -9,7 +9,8 @@ const Name = () => {
     position > 250 ? "rgba(229, 72, 73, 0.2)" : "rgba(229, 72, 73, 0.5)";
   const opacity = position > 250 ? ".5" : "1";
   const transitionValue = "background-color 0.3s ease";
-  const paddingRight = position > 245 ? 0 : 35;
+  const paddingRight = position > 245 && position <= 1500 ? 0 : 35;
+
   return (
     <div
       style={{

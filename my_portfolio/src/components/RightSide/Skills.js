@@ -5,12 +5,14 @@ const Skills = () => {
   const { position, setPosition } = UserAuth();
   let backgroundColor;
   let transitionValue;
-  const paddingLeft = position > 245 ? 50 : 80;
-  const opacity = position > 245 ? "1" : ".5";
+  const paddingLeft = position > 1400 ? 100 : position > 245 ? 60 : 100;
+
+  const opacity = position > 1400 ? "0.5" : position > 245 ? "1" : "0.5";
+
   if (position < 250) {
     backgroundColor = "rgba(222, 157, 54, 0.3)";
     transitionValue = "background-color 0.3s";
-  } else if (position >= 250 && position <= 800) {
+  } else if (position >= 250 && position <= 1400) {
     backgroundColor = "rgba(222, 157, 54, 0.5)";
     transitionValue = "background-color 0.3s";
   } else {
@@ -21,7 +23,7 @@ const Skills = () => {
   return (
     <div
       style={{
-        height: "700px",
+        height: "1100px",
         backgroundColor,
         transition: transitionValue,
         paddingLeft: "40px",
@@ -52,48 +54,51 @@ const Skills = () => {
           Skills
         </h1>
       </div>
-      <div style={{ display: "flex" }}>
+
+      <div>
+        <br />
+        <br />
+        <h2 className="Discripe">Programming languages</h2>
         <div>
-          <h2 className="Discripe">Programming languages</h2>
-          <div>
-            <p className="mainSkills">Expert with:</p>
-            <ul>
-              <li>JavaScript</li>
-              <li>Python</li>
-              <li>C++</li>
-            </ul>
-            <p className="mainSkills">Familiar with:</p>
-            <ul>
-              <li>TypeScript</li>
-            </ul>
-          </div>
-          <h2 className="Discripe">Frameworks</h2>
-          <div>
-            <p className="mainSkills">Expert with:</p>
-            <ul>
-              <li>ReactJs</li>
-            </ul>
-            <p className="mainSkills">Familiar with:</p>
-            <ul>
-              <li>Nodejs</li>
-              <li>Flask</li>
-              <li>Beautifulsoup</li>
-            </ul>
-          </div>
+          <p className="mainSkills">Expert with:</p>
+          <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C++</li>
+          </ul>
+          <p className="mainSkills">Familiar with:</p>
+          <ul>
+            <li>TypeScript</li>
+          </ul>
         </div>
-        <div style={{ paddingLeft: "40px" }}>
-          <h2 className="Discripe">Other</h2>
-          <div>
-            <ul>
-              <li>Git</li>
-              <li>Shell/Bash</li>
-              <li>MySQL</li>
-              <li>Figma</li>
-              <li>adobe photoshop</li>
-              <li>adobe illustrator</li>
-            </ul>
-          </div>
+        <br />
+        <br />
+        <h2 className="Discripe">Frameworks</h2>
+        <div>
+          <p className="mainSkills">Expert with:</p>
+          <ul>
+            <li>ReactJs</li>
+          </ul>
+          <p className="mainSkills">Familiar with:</p>
+          <ul>
+            <li>Nodejs</li>
+            <li>Flask</li>
+            <li>Beautifulsoup</li>
+          </ul>
         </div>
+      </div>
+      <br />
+      <br />
+      <h2 className="Discripe">Other</h2>
+      <div>
+        <ul>
+          <li>Git</li>
+          <li>Shell/Bash</li>
+          <li>MySQL</li>
+          <li>Figma</li>
+          <li>adobe photoshop</li>
+          <li>adobe illustrator</li>
+        </ul>
       </div>
     </div>
   );
