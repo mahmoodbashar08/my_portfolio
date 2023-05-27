@@ -1,14 +1,44 @@
 .mainName {
   font-size: 40pt;
 }
+.mainName2 {
+  font-size: 30pt;
+}
 .Discripe {
   font-size: 26pt;
+}
+ul {
+  padding-left: 30px;
+  font-size: 15pt;
+  /* padding: 30px; */
+}
+
+li {
+  margin-bottom: 5px;
+}
+.mainSkills {
+  font-size: 20pt;
 }
 @media (max-width: 375px) {
   .mainName {
     font-size: 25pt;
   }
+  .mainName2 {
+    font-size: 20pt;
+  }
   .Discripe {
     font-size: 16pt;
   }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-svg {
+  animation: rotate 8s linear infinite;
 }
