@@ -1,0 +1,14 @@
+.mainName {
+  font-size: 40pt;
+}
+.Discripe {
+  font-size: 26pt;
+}
+@media (max-width: 375px) {
+  .mainName {
+    font-size: 25pt;
+  }
+  .Discripe {
+    font-size: 16pt;
+  }
+}

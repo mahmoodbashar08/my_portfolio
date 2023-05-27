@@ -1,19 +1,21 @@
 import React from "react";
 import { UserAuth } from "../../UsePosition";
-
+import Image from "./Image";
+import "./LeftStyle.css";
 const LeftSide = () => {
   const { position, setPosition } = UserAuth();
-  let backgroundColor;
+  let backgroundColor = "#E54849";
   let transition = "background-color 0.3s ease-in-out";
 
   if (position < 250) {
     backgroundColor = "#E54849";
   } else if (position >= 250 && position < 800) {
     backgroundColor = "#DE9D36";
-  } else if (position >= 800) {
+  } else if (position >= 800 && position < 1800) {
     backgroundColor = "#729974";
+  } else if (position >= 1800) {
+    backgroundColor = "#AB58A4";
   }
-
   return (
     <div
       style={{
@@ -24,7 +26,7 @@ const LeftSide = () => {
         overflow: "auto",
         transition,
       }}>
-      LeftSide content
+      <Image />
     </div>
   );
 };

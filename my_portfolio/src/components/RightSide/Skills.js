@@ -3,11 +3,19 @@ import { UserAuth } from "../../UsePosition";
 
 const Skills = () => {
   const { position, setPosition } = UserAuth();
-  const backgroundColor =
-    position > 800 ? "rgba(222, 157, 54, 0.3)" : "rgba(222, 157, 54, 0.5)";
+  let backgroundColor;
+  let transitionValue;
 
-  const transitionValue =
-    position > 800 ? "background-color 0.3s ease" : "background-color 0.3s";
+  if (position < 250) {
+    backgroundColor = "rgba(222, 157, 54, 0.3)";
+    transitionValue = "background-color 0.3s";
+  } else if (position >= 250 && position <= 800) {
+    backgroundColor = "rgba(222, 157, 54, 0.5)";
+    transitionValue = "background-color 0.3s";
+  } else {
+    backgroundColor = "rgba(222, 157, 54, 0.3)";
+    transitionValue = "background-color 0.3s ease";
+  }
 
   return (
     <div
