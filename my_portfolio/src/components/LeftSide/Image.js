@@ -5,10 +5,20 @@ import { UserAuth } from "../../UsePosition";
 import "./LeftStyle.css";
 const Image = () => {
   const { position, setPosition } = UserAuth();
-  let fillColor = position < 250 ? "#E54849" : "#DE9D36";
-  let transition = "fill 0.3s ease-in-out";
-  const isVisible = position > 250;
+  let fillColor = "#E54849";
+  if (position < 250) {
+    fillColor = "#E54849";
+  } else if (position >= 1400 && position < 1800) {
+    fillColor = "#729974";
+  } else if (position >= 1800) {
+    fillColor = "#AB58A4";
+  } else {
+    fillColor = "#DE9D36";
+  }
 
+  let transition = "fill 0.3s ease-in-out";
+  const isVisible = position > 1400;
+  const isVisible2 = position > 250;
   return (
     <div style={{ transition, position: "relative" }}>
       <div style={{ position: "absolute", width: "100%", height: "100%" }}>
@@ -109,6 +119,34 @@ const Image = () => {
             d="M462.81 355.71a20.86 20.86 0 0 1-2.76.18 21.56 21.56 0 0 1 0-43.11 20.86 20.86 0 0 1 2.76.18M422 409.84a18.17 18.17 0 1 0-35.46-5.58 18.4 18.4 0 0 0 .87 5.58"
           />
           <circle class="fill" cx="112.5" cy="201.12" r="8.54" />
+        </svg>
+      </div>
+      <div
+        style={{
+          // display: position > 250 ? "block" : "none",
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          transform: `translateX(${isVisible2 ? "0" : "-100%"})`,
+          transition: "transform 0.5s ease-in-out",
+        }}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 100 700 600">
+          <path
+            style={{
+              fill: fillColor,
+              transition: "fill 0.3s ease-in-out",
+            }}
+            class="stroke fill-bg"
+            d="M142.83 525.67h129.5l42 86h-129l-42.5-86z"
+          />
+          <path
+            class="stroke fill-bg"
+            d="M314.33 611.67l24.67-19h-33.95l9.28 19z"
+          />
+          <path
+            class="fill"
+            d="M234.85 562.55c-7.55-6.27-9.11 2-9.11 2s-8.17-8.31-10.73-2 17.63 19.36 17.63 19.36 9.76-13.1 2.21-19.36z"
+          />
         </svg>
       </div>
     </div>
