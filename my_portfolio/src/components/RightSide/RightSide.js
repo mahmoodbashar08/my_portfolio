@@ -1,7 +1,7 @@
 import React from "react";
 import { UserAuth } from "../../UsePosition";
 import Contact from "./Contact";
-import Experience from "./Experience";
+import Work from "./Work";
 import Name from "./Name";
 import Project from "./Project";
 import Skills from "./Skills";
@@ -17,7 +17,7 @@ const RightSide = () => {
     <div>
       <Name />
       <Skills />
-      <Experience />
+      <Work />
       <Project />
       <Contact />
     </div>
